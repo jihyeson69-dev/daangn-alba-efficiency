@@ -4,7 +4,7 @@
 
 ## 발표자료 보기
 
-[GitHub Pages로 발표 보기](https://jihyeson69-dev.github.io/daangn-alba-efficiency/). `index.html`은 16장으로 구성되어 있습니다.
+[GitHub Pages로 발표 보기](https://jihyeson69-dev.github.io/daangn-alba-efficiency/). `index.html`은 12장으로 구성되어 있습니다.
 
 ## 조작 방법
 

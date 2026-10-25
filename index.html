@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="deck.css?v=6">
+  <link rel="stylesheet" href="deck.css?v=7">
 </head>
 <body>
   <main id="deck" aria-label="당근알바 데이터 분석 발표">
@@ -78,39 +78,25 @@
             <div class="funnel-row reveal delay-2"><span class="funnel-step">C</span><div class="funnel-label"><strong>근무시간 계산 가능</strong><small>시작·종료 시각이 확인된 공고</small></div><div class="funnel-track"><i style="--w:43.4%"></i></div><b>376</b></div>
             <div class="funnel-row highlight reveal delay-3"><span class="funnel-step">D</span><div class="funnel-label"><strong>4시간 이하</strong><small>시간 확인 공고 중 짧은 근무</small></div><div class="funnel-track"><i style="--w:19.7%"></i></div><b>171</b></div>
           </div>
-          <div class="limits-grid reveal delay-1">
-            <article><b>급여 단위 분리</b><p>시급형과 건별형은 직접 비교하지 않습니다. 건별 332건은 작업시간을 알 수 없습니다.</p></article>
-            <article><b>일급 환산</b><p>일급 57건 중 시작·종료 시각이 확인된 52건만 시간당 금액을 계산했습니다.</p></article>
-            <article><b>자료의 한계</b><p>휴게·이동·준비시간과 업무 난이도는 알 수 없습니다. 검색어 공고가 겹치고 ‘쉽다’는 기록도 없습니다.</p></article>
+          <div class="method-pay-panel reveal delay-1">
+            <div class="method-pay-head"><span>공고에 적힌 보수 단위</span><small>단기 표본 866건</small></div>
+            <div class="method-pay-cards">
+              <article><span>시간당</span><strong>477<small>건</small></strong><b>시급형</b></article>
+              <article class="per-task"><span>작업 1건당</span><strong>332<small>건</small></strong><b>건별형</b></article>
+              <article class="daily"><span>하루 단위</span><strong>57<small>건</small></strong><b>일급형</b></article>
+            </div>
+            <div class="method-pay-notes"><p><b>건별형</b>은 작업시간이 없어 시급과 직접 비교하지 않아요.</p><p><b>일급형</b>은 시작·종료 시각이 확인된 52건만 시급으로 환산했어요.</p></div>
           </div>
         </div>
-        <div class="method-bottom reveal delay-2"><span>대표값</span><b>평균 + 중앙값</b><i>·</i><span>짧은 근무</span><b>376건 중 ≤ 4시간 171건</b><i>·</i><span>기준</span><b>2026 최저시급 10,320원</b></div>
-        <p class="footnote">※ 공고에 적힌 제안 금액을 비교한 기술통계입니다. 실제 계약·지급액이나 최저임금법 위반 여부를 판정하지 않습니다.</p>
-      </div>
-    </section>
-
-    <section class="slide" aria-label="공고의 급여 형태">
-      <div class="slide-inner">
-        <header class="slide-heading reveal">
-          <p class="eyebrow">04 / PAY UNITS</p>
-          <h2>시급형과 건별형은<br><em>따로 비교해야 해요</em></h2>
-          <p class="lede">단기 공고 866건 중 시급 477건, 건별 332건입니다. 일급 공고는 별도 환산 기준을 적용합니다.</p>
-        </header>
-        <div class="pay-mix core-pay-mix card reveal">
-          <div class="pay-row"><span class="pay-name">시급</span><div class="pay-track"><i style="--w:100%"></i></div><b>477건</b><small>55.1%</small></div>
-          <div class="pay-row"><span class="pay-name">건별</span><div class="pay-track"><i class="mint-bar" style="--w:69.6%"></i></div><b>332건</b><small>38.3%</small></div>
-          <div class="pay-row"><span class="pay-name">일급</span><div class="pay-track"><i class="peach-bar" style="--w:11.9%"></i></div><b>57건</b><small>6.6%</small></div>
-          <div class="pay-total"><strong>809</strong><span>시급형 + 건별형</span><i>일급 57건은 별도<br><b>52건만 시급 환산</b></i></div>
-        </div>
-        <div class="pay-insight reveal delay-1"><span>핵심</span><p>단기 표본 10건 중 약 4건은 건별 보수예요. <b>작업시간을 몰라 시급과 직접 순위를 매길 수 없습니다.</b></p></div>
-        <p class="footnote">※ 비중은 단기 공고 866건 기준입니다. 시급은 시간당 제안, 건별은 작업 1건의 총액이라 두 금액을 같은 기준으로 순위 매기지 않았습니다.</p>
+        <div class="method-bottom reveal delay-2"><span>시간 확인</span><b>376건</b><i>·</i><span>4시간 이하</span><b>171건</b><i>·</i><span>자료에 없는 조건</span><b>휴게 · 이동 · 준비 · 난이도</b></div>
+        <p class="footnote">※ 평균과 중앙값을 함께 살펴봅니다. 공고상 제안 금액의 기술통계이며 실제 지급액을 뜻하지 않습니다.</p>
       </div>
     </section>
 
     <section class="slide type-overview-slide" aria-label="검색어별 일거리 유형과 보수">
       <div class="slide-inner">
         <header class="slide-heading reveal">
-          <p class="eyebrow">05 / WHAT KIND OF WORK?</p>
+          <p class="eyebrow">04 / WHAT KIND OF WORK?</p>
           <h2>동네 알바는 크게<br><em>집안일·돌봄·기술·심부름</em></h2>
           <p class="lede">검색어를 일거리 묶음으로 읽고, 대표 키워드의 시급 중앙값과 건당 금액을 비교했습니다.</p>
         </header>
@@ -123,67 +109,40 @@
         <p class="footnote">※ 공고는 여러 검색어에 중복될 수 있습니다. 키워드 묶음의 공고 수를 더해 전체 건수로 해석하지 않았으며, 시급·건별 보수도 각각 중앙값으로 분리했습니다.</p>
       </div>
     </section>
-
-    <section class="slide" aria-label="전체 시급과 최저시급">
+    <section class="slide benchmark-slide" aria-label="전체와 짧은 근무 시급 비교">
       <div class="slide-inner">
         <header class="slide-heading reveal">
-          <p class="eyebrow">06 / WAGE CHECK</p>
-          <h2>비교 가능한 공고의<br><em>시급 중앙값은 14,000원</em></h2>
-          <p class="lede">평균보다 중앙값을 먼저 볼게요. 몇 개의 높은 금액이 전체 인상을 끌어올릴 수 있기 때문입니다.</p>
+          <p class="eyebrow">05 / WAGE CHECK</p>
+          <h2>짧은 알바의 중앙 시급,<br><em>전체보다 1,000원 높아요</em></h2>
+          <p class="lede">시간당 비교가 가능한 전체 공고와 명시 근무시간 4시간 이하 공고를 나란히 봅니다.</p>
         </header>
-        <div class="wage-layout">
-          <div class="range-card reveal">
-            <div class="range-head"><span>시급 분포 요약</span><span>n = 529</span></div>
-            <div class="range-plot">
-              <div class="range-rail"></div>
-              <div class="range-band"></div>
-              <div class="range-marker min-marker" style="--x:4%"><i></i><span>최저시급<br><b>10,320원</b></span></div>
-              <div class="range-marker q1-marker" style="--x:26.5%"><i></i><span>1사분위<br><b>12,000원</b></span></div>
-              <div class="range-marker median-marker" style="--x:49.6%"><i></i><span>중앙값<br><b>14,000원</b></span></div>
-              <div class="range-marker mean-marker" style="--x:71.3%"><i></i><span>평균<br><b>15,815원</b></span></div>
-              <div class="range-marker q3-marker" style="--x:73.5%"><i></i><span>3사분위<br><b>16,000원</b></span></div>
-              <div class="range-axis"><span>10,000</span><span>12,000</span><span>14,000</span><span>16,000</span><span>18,000원</span></div>
-            </div>
-            <div class="range-callout"><span>최저시급 대비</span><strong>중앙값 <em>+35.7%</em></strong><small>광고된 금액 기준의 단순 비교</small></div>
-          </div>
-          <div class="compliance-card reveal delay-1">
-            <div class="ring" style="--p:98.7"><div><strong>98.7<span>%</span></strong><small>최저시급 이상</small></div></div>
-            <p><b>529건 중 522건</b>이<br>10,320원 이상으로 나타났어요.</p>
-            <div class="below-note"><span>7건</span>은 공고상 시급이 기준 미만</div>
-            <small class="legal-note">공고 금액만 비교한 통계이며, 법 위반 여부를 판정한 결과는 아닙니다.</small>
-          </div>
+        <div class="benchmark-cards">
+          <article class="benchmark-card reveal">
+            <div class="benchmark-card-head"><span>전체 시급 비교 가능</span><b>n = 529</b></div>
+            <div class="benchmark-rate">14,000<small>원</small></div>
+            <p>중앙값 <span>·</span> 평균 15,815원</p>
+            <div class="benchmark-premium"><span>2026 최저시급 대비</span><strong>+35.7%</strong></div>
+          </article>
+          <article class="benchmark-card short-benchmark reveal delay-1">
+            <div class="benchmark-card-head"><span>4시간 이하</span><b>n = 171</b></div>
+            <div class="benchmark-rate">15,000<small>원</small></div>
+            <p>중앙값 <span>·</span> 평균 15,142원</p>
+            <div class="benchmark-premium"><span>2026 최저시급 대비</span><strong>+45.3%</strong></div>
+          </article>
         </div>
-        <p class="footnote">2026년 법정 최저임금: 시급 10,320원 · 고용노동부 발표 자료</p>
-      </div>
-    </section>
-
-    <section class="slide" aria-label="4시간 이하 공고">
-      <div class="slide-inner short-shift-slide">
-        <div class="short-title reveal">
-          <p class="eyebrow">07 / SHORT SHIFT</p>
-          <h2>4시간 이하 공고도<br><em>중앙값 15,000원</em></h2>
-          <p class="lede">짧은 근무시간이 명시된 171건을 따로 봤습니다.</p>
+        <div class="benchmark-bottom reveal delay-2">
+          <div class="minimum-chip"><span class="minimum-icon">₩</span><p><small>2026 법정 최저시급</small><strong>10,320원</strong></p></div>
+          <div class="benchmark-finding"><strong>전체 529건 중 522건</strong><span>최저시급 이상으로 제시</span></div>
+          <div class="benchmark-finding short-finding"><strong>짧은 공고 171건 모두</strong><span>공고상 시간당 금액이 기준 이상</span></div>
         </div>
-        <div class="short-compare reveal delay-1">
-          <div class="compare-bar"><span class="compare-caption">2026 최저시급</span><div class="compare-track"><i style="--w:68.1%"></i></div><strong>10,320원</strong></div>
-          <div class="compare-bar focus"><span class="compare-caption">4시간 이하 중앙값</span><div class="compare-track"><i style="--w:99.1%"></i></div><strong>15,000원</strong></div>
-          <div class="compare-bar"><span class="compare-caption">4시간 이하 평균</span><div class="compare-track"><i style="--w:100%"></i></div><strong>15,142원</strong></div>
-          <div class="premium-pill">최저시급 대비 <b>+45.3%</b></div>
-        </div>
-        <div class="short-side reveal delay-2">
-          <div class="big-171">171<small>건</small></div>
-          <div class="tiny-dots" aria-hidden="true">● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ●</div>
-          <p><b>171건 모두</b><br>시급 환산액이<br>최저시급 이상</p>
-          <small>분석 표본에서의 결과</small>
-        </div>
-        <div class="bottom-note reveal delay-3"><span class="tiny-icon">!</span> 시작·종료 시간이 명시된 공고만 포함합니다. 실제 작업 강도나 전체 소요시간을 뜻하지 않아요.</div>
+        <p class="footnote">※ 시작·종료 시각이 확인된 공고만 4시간 이하로 분류했습니다. 광고 금액 비교이며 실제 계약·지급이나 법 위반 여부를 판정하지 않습니다.</p>
       </div>
     </section>
 
     <section class="slide" aria-label="짧은 근무 유형 비교">
       <div class="slide-inner">
         <header class="slide-heading reveal">
-          <p class="eyebrow">08 / SHORT-SHIFT TYPES</p>
+          <p class="eyebrow">06 / SHORT-SHIFT TYPES</p>
           <h2>짧은 근무 그룹은<br><em>반려동물·침대·시터</em>가 눈에 띄어요</h2>
           <p class="lede">4시간 이하 공고 중 표본 10건 이상인 검색 키워드의 시급 환산 중앙값입니다.</p>
         </header>
@@ -204,28 +163,10 @@
       </div>
     </section>
 
-    <section class="slide" aria-label="고시급 표본 수 비교">
-      <div class="slide-inner">
-        <header class="slide-heading reveal">
-          <p class="eyebrow">09 / LOOK BEYOND THE AVERAGE</p>
-          <h2>눈에 띄는 고시급,<br><em>표본 수까지 같이 보기</em></h2>
-          <p class="lede">건당이 아닌 시급 환산 공고에서도 키워드별 표본 크기는 크게 달랐습니다.</p>
-        </header>
-        <div class="rate-snapshot-grid">
-          <article class="rate-snapshot pet-rate reveal"><span>펫시팅</span><strong>28,000원</strong><small>중앙 시급 · n=7</small><p>높은 값이지만 표본이 작아 참고용으로 봐요.</p></article>
-          <article class="rate-snapshot repair-rate reveal delay-1"><span>수리</span><strong>16,389원</strong><small>중앙 시급 · n=18</small><p>평균 25,742원보다 중앙값이 안정적이에요.</p></article>
-          <article class="rate-snapshot reveal delay-2"><span>고양이 돌봄</span><strong>16,000원</strong><small>중앙 시급 · n=28</small><p>돌봄 경험과 방문 조건을 함께 확인하세요.</p></article>
-          <article class="rate-snapshot reveal delay-3"><span>반려동물 돌봄</span><strong>15,000원</strong><small>중앙 시급 · n=58</small><p>4시간 이하 표본도 22건으로 비교적 많아요.</p></article>
-        </div>
-        <div class="mean-note reveal delay-2"><span>표본을 같이 보기</span> 펫시팅은 중앙값이 가장 높지만 n=7입니다. 높은 숫자만 보고 안정적인 시세라고 단정하지 않아요.</div>
-        <p class="footnote">※ 펫시팅 키워드의 전체 시급 표본 n=7이며, 4시간 이하 분석과는 다른 비교 집단입니다.</p>
-      </div>
-    </section>
-
     <section class="slide" aria-label="건당 보수 비교">
       <div class="slide-inner">
         <header class="slide-heading reveal">
-          <p class="eyebrow">10 / PER TASK</p>
+          <p class="eyebrow">07 / PER TASK</p>
           <h2>건당 보수는 <em>총액 비교</em>까지만</h2>
           <p class="lede">시간이 적혀 있지 않은 공고는 시급으로 바꾸지 않고, 약속된 작업 1건의 금액으로만 봅니다.</p>
         </header>
@@ -244,7 +185,7 @@
     <section class="slide urgency-slide" aria-label="긴급 구인 공고의 특징">
       <div class="slide-inner">
         <header class="slide-heading reveal">
-          <p class="eyebrow">11 / URGENT ≠ PREMIUM</p>
+          <p class="eyebrow">08 / URGENT ≠ PREMIUM</p>
           <h2>급구라고 해서<br><em>시급까지 높진 않았어요</em></h2>
           <p class="lede">제목에 ‘급구·오늘·당일·지금’이 들어간 공고와 그 외 공고를 비교했습니다.</p>
         </header>
@@ -264,7 +205,7 @@
     <section class="slide queue-slide" aria-label="웨이팅과 줄서기 대행">
       <div class="slide-inner">
         <header class="slide-heading reveal">
-          <p class="eyebrow">12 / THE QUEUEING GIG</p>
+          <p class="eyebrow">09 / THE QUEUEING GIG</p>
           <h2>한정판 오픈런에서<br><em>두쫀쿠 줄서기까지</em></h2>
           <p class="lede">요즘 화제의 줄서기 대행은 얼마일까요? CSV의 작은 표본과 최근 보도 사례를 나눠 봅니다.</p>
         </header>
@@ -290,49 +231,12 @@
       </div>
     </section>
 
-    <section class="slide keyword-table-slide" aria-label="검색어별 평균 시급 표">
-      <div class="slide-inner">
-        <header class="slide-heading reveal">
-          <p class="eyebrow">13 / RATE BY SEARCH TERM</p>
-          <h2>검색어별 평균 시급,<br><em>중앙값과 표본도 함께</em></h2>
-          <p class="lede">시급 비교가 가능한 공고를 검색어별로 묶었습니다. 높은 평균이 대표 시세라고 단정하지 않도록 중앙값도 나란히 봅니다.</p>
-        </header>
-        <div class="keyword-legend reveal"><span><i class="key-orange"></i>평균 시급</span><span><i class="key-mint"></i>중앙 시급</span><small>시급 비교 가능 표본만</small></div>
-        <div class="keyword-columns">
-          <div class="keyword-card reveal">
-            <div class="keyword-head"><span>검색어</span><span>표본</span><span>평균</span><span>중앙값</span></div>
-            <div class="keyword-row"><b>청소</b><small>75</small><strong>13,209</strong><strong>12,000</strong></div>
-            <div class="keyword-row"><b>당일급구</b><small>81</small><strong>12,999</strong><strong>12,000</strong></div>
-            <div class="keyword-row"><b>이삿짐</b><small>44</small><strong>16,621</strong><strong>12,361</strong></div>
-            <div class="keyword-row"><b>동행</b><small>67</small><strong>15,112</strong><strong>15,000</strong></div>
-            <div class="keyword-row"><b>침대</b><small>31</small><strong>16,452</strong><strong>15,000</strong></div>
-            <div class="keyword-row"><b>수리</b><small>18</small><strong>25,742</strong><strong>16,389</strong></div>
-            <div class="keyword-row"><b>반려동물 돌봄</b><small>58</small><strong>16,287</strong><strong>15,000</strong></div>
-            <div class="keyword-row"><b>가구</b><small>26</small><strong>16,897</strong><strong>15,000</strong></div>
-            <div class="keyword-row"><b>고양이</b><small>28</small><strong>16,261</strong><strong>16,000</strong></div>
-          </div>
-          <div class="keyword-card reveal delay-1">
-            <div class="keyword-head"><span>검색어</span><span>표본</span><span>평균</span><span>중앙값</span></div>
-            <div class="keyword-row"><b>시터</b><small>39</small><strong>15,333</strong><strong>15,000</strong></div>
-            <div class="keyword-row"><b>운반</b><small>13</small><strong>13,646</strong><strong>12,500</strong></div>
-            <div class="keyword-row"><b>조립</b><small>14</small><strong>20,480</strong><strong>13,500</strong></div>
-            <div class="keyword-row"><b>폐기물</b><small>11</small><strong>23,682</strong><strong>15,000</strong></div>
-            <div class="keyword-row"><b>심부름</b><small>11</small><strong>13,266</strong><strong>13,000</strong></div>
-            <div class="keyword-row low-n"><b>펫시팅</b><small>7</small><strong>30,114</strong><strong>28,000</strong></div>
-            <div class="keyword-row low-n"><b>웨이팅</b><small>4</small><strong>11,705</strong><strong>12,000</strong></div>
-            <div class="keyword-row low-n"><b>벌레</b><small>2</small><strong>20,000</strong><strong>20,000</strong></div>
-          </div>
-        </div>
-        <p class="footnote">※ 단위: 원. ‘당일급구’는 업무 유형이 아닌 검색어입니다. 표본 10건 미만은 작은 표본이라 시세 판단에 특히 주의하세요. 검색어 간 공고가 겹칠 수 있습니다.</p>
-      </div>
-    </section>
-
     <section class="slide student-guide-slide" aria-label="대학생 상황별 알바 후보">
       <div class="slide-inner">
         <header class="slide-heading reveal">
-          <p class="eyebrow">14 / A STUDENT'S SHORTLIST</p>
-          <h2>내가 원하는 방식에 따라<br><em>첫 후보를 골라봐요</em></h2>
-          <p class="lede">표본에서 눈에 띈 조건을 대학생의 일정·관심·경험에 맞춰 연결했습니다.</p>
+          <p class="eyebrow">10 / A STUDENT'S SHORTLIST</p>
+          <h2>대학생은 높은 금액보다<br><em>내 일정·경험에 맞춰 골라요</em></h2>
+          <p class="lede">시간표와 관심사에 맞춰 살펴볼 탐색 출발점입니다. 쉬운 일이라고 단정하지 않고 확인할 조건도 함께 적었습니다.</p>
         </header>
         <div class="shortlist-grid">
           <article class="student-choice pet-shortlist reveal"><img class="pet-care-photo" src="assets/student-pet-care.webp" alt="동네 공원에서 반려견을 산책시키는 성인 대학생"><span class="pet-image-note">AI 생성 이미지</span><span class="choice-fit">동물 돌봄에 관심</span><h3>반려동물 돌봄</h3><strong>중앙 15,000원</strong><small>4시간 이하 n=22</small><div class="card-foot">동물 특성 · 돌봄 경험 · 이동거리 확인</div></article>
@@ -348,7 +252,7 @@
     <section class="slide closing" aria-label="한계와 결론">
       <div class="slide-inner close-layout">
         <div class="close-copy reveal">
-          <p class="eyebrow">15 / TAKEAWAY</p>
+          <p class="eyebrow">11 / TAKEAWAY</p>
           <h2>알찬 알바는<br><em>시급 하나로<br>정해지지 않아요.</em></h2>
           <p class="lede">공고 시급에 실제 근무·이동 시간과 일의 조건까지 더해 비교해 보세요.</p>
           <div class="closing-rule"></div>
@@ -373,7 +277,7 @@
   <nav class="deck-ui" aria-label="슬라이드 탐색">
     <button class="nav-arrow" id="prev" aria-label="이전 슬라이드">←</button>
     <div class="dots" id="dots"></div>
-    <span class="slide-count"><b id="current">01</b><i>/</i><span id="total">10</span></span>
+    <span class="slide-count"><b id="current">01</b><i>/</i><span id="total">12</span></span>
     <button class="nav-arrow next" id="next" aria-label="다음 슬라이드">→</button>
   </nav>
   <div class="progress-track"><i id="progress"></i></div>
