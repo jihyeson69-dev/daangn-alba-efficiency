@@ -4,7 +4,7 @@
 
 ## 발표자료 보기
 
-GitHub Pages 배포 주소에서 바로 발표할 수 있습니다. `index.html`은 15장으로 구성되어 있습니다.
+[GitHub Pages로 발표 보기](https://jihyeson69-dev.github.io/daangn-alba-efficiency/). `index.html`은 15장으로 구성되어 있습니다.
 
 ## 조작 방법
 
