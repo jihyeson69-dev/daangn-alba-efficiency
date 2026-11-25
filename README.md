@@ -1,3 +1,10 @@
+# 발표자료
+
+- [서울 25개 구 수요 유형 슬라이드](https://jihyeson69-dev.github.io/daangn-alba-efficiency/seoul-clusters/)
+- [편집 가능한 PowerPoint와 발표 대본](./seoul-clusters/)
+
+---
+
 ﻿# 짧게 일하고 알차게 벌려면?
 
 단기 당근알바 공고 866건을 살펴보는 한국어 발표용 HTML 슬라이드 덱입니다. 검색 키워드를 일거리 유형별로 소개하고, 시급형과 건별형을 분리해 2026년 최저시급, 4시간 이하 공고, 급구와 웨이팅 대행 사례를 비교합니다.
